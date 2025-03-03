@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Wild Ducks LLC</title>
+    <link rel="stylesheet" href="/code/website/css/styles.css">
+    <script src="/code/website/js/analytics.js"></script>
+    <script src="/code/website/js/loadComponents.js" defer></script>
+    <style>
+        .expandable {
+            border-bottom: 2px solid #00ffff;
+            cursor: pointer;
+            padding: 10px 0;
+            font-size: 1.2em;
+            color: #00ffff;
+            text-align: center;
+            margin: 20px auto;
+            max-width: 400px; /* Makes separator centered and fixed size */
+        }
+    
+        .expandable-content {
+            display: none; /* Default to collapsed */
+            padding: 15px;
+            font-size: 1em;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px; /* Applies margins for better readability */
+        }
+    
+        .expandable.active + .expandable-content {
+            display: block; /* Show content when active */
+        }
+    
+        .mission-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+    
+        .mission-container img {
+            max-width: 240px;
+            height: auto;
+        }
+        blockquote {
+            font-family: "Georgia", serif; /* Change font */
+            font-size: 1em; /* Adjust size */
+            color: #e1e6e6; /* Change text color */
+            border-left: 4px solid #bdc1c1; /* Add a left border */
+            padding-left: 15px; /* Space from border */
+            margin: 20px 0; /* Adjust top/bottom margin */
+            font-style: italic; /* Optional: Italicized text */
+        }
+    </style>
+    
+</head>
+<body>
+    <header></header>
+
+    <main class="container">
+        <div class="mission-container">
+            <img src="/code/website/images/logo.png" alt="Wild Ducks LLC Logo">
+            <p class="mission-statement">At Wild Ducks, we believe technology should empower everyone—not just big corporations with deep pockets. Our mission is simple: use AI to help individuals, small businesses, and university departments overcome cost and complexity barriers, making advanced technology more accessible and practical.</p>
+        </div>
+        
+        <h2 class="expandable">Breaking Down Barriers &#x25BC;</h2>
+        <div class="expandable-content">
+            <p>Consider the process of patenting an invention. In 1807, Eli Whitney, a farm laborer and teacher, secured a patent for the cotton gin. Today, the cost of obtaining a patent can soar to $10,000–$20,000, making it nearly impossible for independent inventors to afford. That’s where AI steps in.</p>
+            <p>By automating tedious tasks—like formatting a patent to meet USPTO standards—AI can cut costs by a factor of ten while improving quality. This isn’t just a win for inventors; lawyers, too, can focus on higher-value work instead of drowning in paperwork.</p>
+            <p>But patents are just the beginning. Wild Ducks harnesses AI for content creation, risk assessments, structured searches (for jobs or products), marketing, and social media automation—eliminating repetitive work so people can focus on what they love.</p>
+        </div>
+
+        <h2 class="expandable">Why "Wild Ducks"? &#x25BC;</h2>
+        <div class="expandable-content">
+            <p>As a retired IBM Fellow, Jerry draws inspiration from Thomas J. Watson Jr., IBM’s former CEO, who once said:</p>
+            <blockquote>“I talk a lot around here about wild ducks... It takes a few wild ducks to make any business go, because if you don’t have the fellows with the new ideas willing to buck the managerial trends and shock them into doing something new and better… the business pretty well slows down.”</blockquote>
+            <p>Wild Ducks thrive by challenging the status quo—pushing boundaries, questioning assumptions, and creating new possibilities. That’s exactly what we do.</p>
+        </div>
+
+        <h2 class="expandable">Jerry Cuomo, Wild Ducks Founder &#x25BC;</h2>
+        <div class="expandable-content">
+            <p>Jerry is a retired IBM Fellow with more than 38 years' experience as a software innovator and open-source advocate. He currently lectures at North Carolina State University and leads Wild Ducks, LLC, where he consults, develops, and secures intellectual property in trustworthy AI, blockchain, and cybersecurity.</p>
+            <p>Jerry holds more than 100 U.S. patents. Among his most notable is the "Someone is typing…" indicator, now used billions of times daily in instant messaging.</p>
+            <p>Jerry is the author of the Think series, which includes <em>Think Blockchain</em> and <em>Think Artificial Intelligence</em>, as well as co-author of <em>Blockchain for Business</em> and <em>The Art of Automation</em>.</p>
+        </div>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        document.querySelectorAll('.expandable').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+                let content = item.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>

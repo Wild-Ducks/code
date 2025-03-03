@@ -1,0 +1,295 @@
+/* Modular CSS for Wild Ducks LLC */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1e1e1e;
+    padding: 20px;
+    position: relative;
+}
+
+.logo-link {
+    display: inline-block;
+    border-bottom: 3px solid #00ffff; /* Underline effect */
+    padding-bottom: 3px;
+}
+
+.logo {
+    max-width: 75px;
+    height: auto;
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+    gap: 15px; /* Adds spacing between LinkedIn and YouTube buttons */
+}
+
+/* Ensures YouTube Subscribe Button Aligns */
+.g-ytsubscribe {
+    display: flex;
+    align-items: center;
+}
+
+/* LinkedIn Follow Button */
+.libutton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    text-align: center;
+    outline: none;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    width: auto;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #0A66C2;
+    font-family: "SF Pro Text", Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+/* Centering the Welcome Title */
+.container {
+    text-align: center;
+    margin-bottom: 10px; /* Prevents extra spacing above footer */
+    padding-bottom: 0;
+}
+
+.mission-statement {
+    padding: 5px;
+    font-size: 1em;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 650px;
+}
+
+/* Grid for Tiles */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 0px; /* Ensures no extra bottom padding */
+    border-bottom: none; /* Prevents extra horizontal line */
+}
+
+/* Tile Design */
+.tile {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.15); /* Subtle 3D shading */
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 255, 255, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Tile Images */
+.tile img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* Tile Titles */
+.tile h2 {
+    color: #00ffff;
+    margin-top: 15px;
+}
+
+/* Tile Description (Hidden by Default, Shown on Hover) */
+.tile-description {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+.tile:hover .tile-description {
+    display: block;
+}
+
+/* Flip Card Effect */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    perspective: 1000px;
+    position: relative;
+    min-height: 350px; /* Keeps baseline height */
+    height: auto; /* Allows the container to expand */
+    display: flex;
+}
+
+/* Inner Flip Effect */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Flipping on Click */
+.flip-card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: relative; /* Allows natural flow, ensuring footer moves down */
+    width: 100%;
+    min-height: 350px; /* Ensures a consistent starting height */
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0px 4px 8px rgba(0, 255, 255, 0.15);
+}
+
+/* Front Side */
+.flip-card-front {
+    border: none;
+}
+
+.flip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 255, 255, 0.3); /* Matches tile glow */
+    cursor: pointer;
+}
+
+/* Ensure images fit properly within the card */
+.flip-card-front img {
+    max-width: 90%;  /* Ensures image does not exceed the width of the card */
+    height: auto;     /* Maintains aspect ratio */
+    max-height: 180px; /* Adjusted for better visibility */
+    object-fit: contain; /* Ensures the entire image fits without distortion */
+}
+
+/* Back Side (Initially Hidden) */
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #00ffff;
+    color: #121212;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 350px; /* Ensures a minimum height */
+    height: auto; /* Allows it to grow dynamically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #121212;
+    color: #00ffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #00aaaa;
+    color: #fff;
+}
+
+/* Vertical Grid for Videos */
+.vertical-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Adds spacing between videos */
+    align-items: center;
+}
+
+/* Video Tile Styling */
+.video-tile {
+    width: 100%;
+    max-width: 800px; /* Ensures videos stay readable */
+    text-align: center;
+}
+
+.video-tile iframe {
+    border-radius: 10px; /* Adds subtle rounded corners */
+}
+
+/* Footer should have one clean border */
+footer {
+    background-color: #1e1e1e;
+    padding:10px 20px; /* Keeps text from touching the edges */
+    margin-top: 10; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+}
+
+/* Footer Left (Copyright) */
+.footer-left {
+    color: #aaaaaa; /* Subtle gray text */
+    margin-left: 10px; /* Indent text slightly */
+}
+
+/* Footer Navigation */
+.footer-nav {
+    text-align: right;
+    margin-right: 10px; /* Adds right margin to prevent edge flush */
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.footer-nav li {
+    margin-left: 2px;
+}
+
+.footer-nav a {
+    color: #aaaaaa; /* Subtle gray text */
+    text-decoration: none;
+    padding: 5px 10px; /* Ensures clickable area has spacing */
+}
+
+.footer-nav a:hover {
+    color: #ffffff; /* Contrast on hover */
+}

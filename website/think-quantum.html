@@ -2,17 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Think Quantum - Wild Ducks LLC</title>
 
-    <link rel="stylesheet" href="/code/website/css/styles.css">
+    <link
+        rel="stylesheet"
+        href="/code/website/css/styles.css"
+    >
 
-    <script src="/code/website/js/loadMeta.js" defer></script>
-    <script src="/code/website/js/analytics.js" defer></script>
-    <script src="/code/website/js/loadComponents.js" defer></script>
+    <script
+        src="/code/website/js/loadMeta.js"
+        defer
+    ></script>
+
+    <script
+        src="/code/website/js/analytics.js"
+        defer
+    ></script>
+
+    <script
+        src="/code/website/js/loadComponents.js"
+        defer
+    ></script>
 </head>
 
 <body>
+
     <header></header>
 
     <main class="container">
@@ -20,68 +39,149 @@
         <h1>Think Quantum</h1>
 
         <p class="mission-statement">
-            Jerry Cuomo’s upcoming book introduces quantum computing through
-            practical examples, simple analogies, and hands-on experiments for
-            curious builders and software engineers.
+            Jerry Cuomo’s upcoming book introduces quantum computing
+            through practical examples, simple analogies, and hands-on
+            experiments for curious builders and software engineers.
         </p>
 
-        <section style="text-align: center; margin: 2rem 0;">
+        <!-- Book Cover -->
+
+        <section
+            style="
+                text-align: center;
+                margin: 2rem 0;
+            "
+        >
 
             <img
                 src="/code/website/images/think-quantum-book.png"
                 alt="Think Quantum Book Cover"
+
                 style="
-                    width: 50%;
-                    max-width: 500px;
+                    width: 34%;
+                    max-width: 440px;
+                    min-width: 240px;
+
                     height: auto;
+
                     border-radius: 10px;
-                    box-shadow: 0px 4px 12px rgba(255, 0, 0, 0.18);
+
+                    box-shadow:
+                        0px 4px 12px rgba(255, 0, 0, 0.18);
                 "
             >
 
         </section>
+
+        <!-- Early Access Content -->
 
         <section class="content-section">
 
             <h2>Join the Early Access List</h2>
 
             <p>
-                <em>Think Quantum</em> is now in development as the next book in
-                Jerry Cuomo’s Think Series, following <em>Think Blockchain</em>
-                and <em>Think AI</em>.
+                <em>Think Quantum</em> is now in development as the next
+                book in Jerry Cuomo’s Think Series, following
+                <em>Think Blockchain</em> and <em>Think AI</em>.
             </p>
 
             <p>
-                Early-access readers will receive a draft table of contents and
-                draft Chapters 1 and 2 near the end of June, along with occasional
-                updates as the book continues to take shape.
+                Early-access readers will receive a draft table of
+                contents and draft Chapters 1 and 2 near the end of
+                June, along with occasional updates as the book
+                continues to take shape.
             </p>
 
             <p>
-                The book is designed for students, software engineers, and curious
-                builders who want to understand quantum computing through code,
-                circuits, systems thinking, and practical examples.
+                The book is designed for students, software engineers,
+                and curious builders who want to understand quantum
+                computing through code, circuits, systems thinking,
+                and practical examples.
             </p>
 
-            <p>
-                <a
+            <!-- Early Access Form -->
+
+            <form
+                action="https://formsubmit.co/info@wildducks.us"
+                method="POST"
+
+                style="
+                    margin-top: 2rem;
+                "
+            >
+
+                <p>
+
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+
+                        style="
+                            width: 100%;
+                            max-width: 420px;
+
+                            padding: 12px;
+
+                            border-radius: 6px;
+                            border: none;
+
+                            margin-bottom: 12px;
+                        "
+                    >
+
+                </p>
+
+                <p>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+
+                        style="
+                            width: 100%;
+                            max-width: 420px;
+
+                            padding: 12px;
+
+                            border-radius: 6px;
+                            border: none;
+
+                            margin-bottom: 12px;
+                        "
+                    >
+
+                </p>
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Think Quantum Early Access"
+                >
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                >
+
+                <button
+                    type="submit"
                     class="cta-button"
-                    href="mailto:info@wildducks.us?subject=Think%20Quantum%20Early%20Access"
                 >
                     Join Early Access
-                </a>
-            </p>
+                </button>
 
-            <p>
-                Or email
-                <a href="mailto:info@wildducks.us">info@wildducks.us</a>
-                with the subject <strong>Think Quantum Early Access</strong>.
-            </p>
+            </form>
 
         </section>
 
     </main>
 
     <footer></footer>
+
 </body>
 </html>

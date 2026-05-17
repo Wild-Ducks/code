@@ -1,17 +1,52 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Fetch and insert the header
-    fetch("/code/website/header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.querySelector("header").innerHTML = data;
-        })
-        .catch(error => console.error("Error loading header:", error));
+/*
+ * Shared Component Loader
+ *
+ * Dynamically loads the shared header and footer
+ * across all Wild Ducks LLC pages.
+ */
 
-    // Fetch and insert the footer
-    fetch("/code/website/footer.html")
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* Load shared header */
+
+    fetch("/website/header.html")
+
         .then(response => response.text())
+
         .then(data => {
-            document.querySelector("footer").innerHTML = data;
+
+            document.querySelector("header").innerHTML = data;
+
         })
-        .catch(error => console.error("Error loading footer:", error));
+
+        .catch(error => {
+
+            console.error(
+                "Error loading header:",
+                error
+            );
+
+        });
+
+    /* Load shared footer */
+
+    fetch("/website/footer.html")
+
+        .then(response => response.text())
+
+        .then(data => {
+
+            document.querySelector("footer").innerHTML = data;
+
+        })
+
+        .catch(error => {
+
+            console.error(
+                "Error loading footer:",
+                error
+            );
+
+        });
+
 });

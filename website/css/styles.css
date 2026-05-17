@@ -1,5 +1,9 @@
 /* Modular CSS for Wild Ducks LLC */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #121212;
@@ -10,18 +14,30 @@ body {
 
 /* Header Styling */
 .banner {
+    display: grid;
+    grid-template-columns: 140px 1fr 320px;
+    align-items: center;
+
+    background-color: #1e1e1e;
+    padding: 16px 20px;
+    position: relative;
+}
+
+.header-left {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-color: #1e1e1e;
-    padding: 20px;
-    position: relative;
+    justify-content: flex-start;
+}
+
+.header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-link {
     display: inline-block;
     border-bottom: 3px solid #00ffff;
-    /* Underline effect */
     padding-bottom: 3px;
 }
 
@@ -35,9 +51,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-grow: 1;
     gap: 15px;
-    /* Adds spacing between LinkedIn and YouTube buttons */
 }
 
 /* Ensures YouTube Subscribe Button Aligns */
@@ -62,6 +76,29 @@ body {
     background-color: #0A66C2;
     font-family: "SF Pro Text", Helvetica, sans-serif;
     white-space: nowrap;
+}
+
+/* Header layout for smaller screens */
+@media (max-width: 900px) {
+    .banner {
+        grid-template-columns: 90px 1fr;
+        row-gap: 12px;
+    }
+
+    .header-left {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .header-right {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .header-center {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
 }
 
 /* Centering the Welcome Title */

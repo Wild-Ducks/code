@@ -251,85 +251,58 @@ body {
 /* =========================
    Think Quantum Banner
 ========================= */
+/* =========================
+   Think Quantum Banner
+========================= */
 
 .feature-banner-link {
     display: block;
     text-decoration: none;
-    margin: 2rem 0 3rem 0;
+    max-width: 1200px;
+    margin: 2rem auto 3rem auto;
+    padding: 0 20px;
 }
 
 .feature-banner {
     position: relative;
     overflow: hidden;
+    height: 240px;
 
-    border-radius: 18px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
 
-    background-color: #111;
-
-    box-shadow:
-        0 0 18px rgba(255, 0, 0, 0.10),
-        0 0 30px rgba(255, 0, 0, 0.05);
+    box-shadow: 0px 4px 8px rgba(255, 0, 0, 0.15);
 
     transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        filter 0.25s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
 }
 
-/* Hover behavior */
-
 .feature-banner:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 0 24px rgba(255, 0, 0, 0.22),
-        0 0 50px rgba(255, 0, 0, 0.12);
-
-    filter: brightness(1.03);
-
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(255, 0, 0, 0.30);
+    filter: brightness(1.05);
     cursor: pointer;
 }
 
-/* Optional subtle border glow */
-
-.feature-banner::after {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    border-radius: 18px;
-
-    border: 1px solid rgba(255, 0, 0, 0.15);
-
-    pointer-events: none;
-}
-
-/* Banner image */
-
 .feature-banner img {
     display: block;
-
     width: 100%;
-    height: auto;
+    height: 100%;
 
-    border-radius: 18px;
+    object-fit: cover;
+    object-position: center;
 }
 
-/* Small screen adjustments */
-
 @media (max-width: 768px) {
-
     .feature-banner-link {
-        margin: 1.5rem 0 2rem 0;
+        margin: 1.5rem auto 2rem auto;
+        padding: 0 20px;
     }
 
     .feature-banner {
-        border-radius: 14px;
-    }
-
-    .feature-banner img {
-        border-radius: 14px;
+        height: 160px;
     }
 }
 
@@ -337,7 +310,7 @@ body {
 footer {
     background-color: #1e1e1e;
     padding:10px 20px; /* Keeps text from touching the edges */
-    margin-top: 10; 
+    margin-top: 10px; 
     display: flex;
     justify-content: space-between;
     align-items: center;

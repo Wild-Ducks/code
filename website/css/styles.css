@@ -22,10 +22,12 @@ body {
 /* Centered header layout */
 .banner-inner {
     display: grid;
-    grid-template-columns: 140px 1fr 320px;
+    grid-template-columns: 140px 1fr 140px;
     align-items: center;
 
+    width: 100%;
     max-width: 1200px;
+
     margin: 0 auto;
 }
 

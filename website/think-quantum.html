@@ -1,46 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-
+    <!-- Basic page metadata -->
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Think Quantum - Wild Ducks LLC</title>
 
-    <link
-        rel="stylesheet"
-        href="/code/website/css/styles.css"
-    >
+    <!-- Site-wide styling and scripts -->
+    <link rel="stylesheet" href="/css/styles.css">
 
-    <script
-        src="/code/website/js/loadMeta.js"
-        defer
-    ></script>
-
-    <script
-        src="/code/website/js/analytics.js"
-        defer
-    ></script>
-
-    <script
-        src="/code/website/js/loadComponents.js"
-        defer
-    ></script>
-
+    <script src="/js/loadMeta.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
+    <script src="/js/loadComponents.js" defer></script>
 </head>
 
 <body>
 
+    <!-- Shared site header loaded by loadComponents.js -->
     <header></header>
 
     <main class="container">
 
-        <!-- Page Title -->
-
+        <!-- Page introduction -->
         <h1>Think Quantum</h1>
 
         <p class="mission-statement">
@@ -49,40 +31,27 @@
             experiments for curious builders and software engineers.
         </p>
 
-        <!-- Book Cover -->
-
-        <section
-            style="
-                text-align: center;
-                margin: 2rem 0;
-            "
-        >
+        <!-- Book cover image -->
+        <section style="text-align: center; margin: 2rem 0;">
 
             <img
-                src="/code/website/images/think-quantum-book.png"
+                src="/images/think-quantum-book.png"
                 alt="Think Quantum Book Cover"
-
                 style="
                     width: 25%;
                     max-width: 420px;
                     min-width: 220px;
-
                     height: auto;
-
                     border-radius: 10px;
-
-                    box-shadow:
-                        0px 4px 12px rgba(255, 0, 0, 0.18);
+                    box-shadow: 0px 4px 12px rgba(255, 0, 0, 0.18);
                 "
             >
 
         </section>
 
-        <!-- Early Access Content -->
-
+        <!-- Early access description and signup form -->
         <section
             class="content-section"
-
             style="
                 max-width: 760px;
                 margin: 0 auto 3rem auto;
@@ -111,24 +80,18 @@
                 and practical examples.
             </p>
 
-            <!-- Embedded Google Form -->
-
+            <!-- Embedded Google Form for early-access signup -->
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSca-S4Bc7URSH_dhl9-3oCsp0pW9l-ELw8NuMEGvWO9LS2oTQ/viewform?embedded=true"
-
                 width="100%"
                 height="720"
-
                 frameborder="0"
                 marginheight="0"
                 marginwidth="0"
-
                 style="
                     border: none;
                     border-radius: 10px;
-
                     background-color: #1e1e1e;
-
                     margin-top: 2rem;
                 "
             >
@@ -139,7 +102,9 @@
 
     </main>
 
+    <!-- Shared site footer loaded by loadComponents.js -->
     <footer></footer>
 
 </body>
+
 </html>

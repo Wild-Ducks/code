@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
+
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
@@ -28,6 +30,7 @@
         src="/code/website/js/loadComponents.js"
         defer
     ></script>
+
 </head>
 
 <body>
@@ -35,6 +38,8 @@
     <header></header>
 
     <main class="container">
+
+        <!-- Page Title -->
 
         <h1>Think Quantum</h1>
 
@@ -58,9 +63,9 @@
                 alt="Think Quantum Book Cover"
 
                 style="
-                    width: 34%;
-                    max-width: 440px;
-                    min-width: 240px;
+                    width: 32%;
+                    max-width: 420px;
+                    min-width: 220px;
 
                     height: auto;
 
@@ -75,7 +80,15 @@
 
         <!-- Early Access Content -->
 
-        <section class="content-section">
+        <section
+            class="content-section"
+
+            style="
+                max-width: 760px;
+                margin: 0 auto 3rem auto;
+                padding: 0 20px;
+            "
+        >
 
             <h2>Join the Early Access List</h2>
 
@@ -86,10 +99,9 @@
             </p>
 
             <p>
-                Early-access readers will receive a draft table of
-                contents and draft Chapters 1 and 2 near the end of
-                June, along with occasional updates as the book
-                continues to take shape.
+                Early-access readers will receive draft chapters,
+                updates, and release announcements as the book
+                continues to evolve.
             </p>
 
             <p>
@@ -99,83 +111,29 @@
                 and practical examples.
             </p>
 
-            <!-- Early Access Form -->
+            <!-- Embedded Google Form -->
 
-            <form
-                action="https://formsubmit.co/info@wildducks.us"
-                method="POST"
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSca-S4Bc7URSH_dhl9-3oCsp0pW9l-ELw8NuMEGvWO9LS2oTQ/viewform?embedded=true"
+
+                width="100%"
+                height="720"
+
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
 
                 style="
+                    border: none;
+                    border-radius: 10px;
+
+                    background-color: #1e1e1e;
+
                     margin-top: 2rem;
                 "
             >
-
-                <p>
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        required
-
-                        style="
-                            width: 100%;
-                            max-width: 420px;
-
-                            padding: 12px;
-
-                            border-radius: 6px;
-                            border: none;
-
-                            margin-bottom: 12px;
-                        "
-                    >
-
-                </p>
-
-                <p>
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        required
-
-                        style="
-                            width: 100%;
-                            max-width: 420px;
-
-                            padding: 12px;
-
-                            border-radius: 6px;
-                            border: none;
-
-                            margin-bottom: 12px;
-                        "
-                    >
-
-                </p>
-
-                <input
-                    type="hidden"
-                    name="_subject"
-                    value="Think Quantum Early Access"
-                >
-
-                <input
-                    type="hidden"
-                    name="_captcha"
-                    value="false"
-                >
-
-                <button
-                    type="submit"
-                    class="cta-button"
-                >
-                    Join Early Access
-                </button>
-
-            </form>
+                Loading…
+            </iframe>
 
         </section>
 

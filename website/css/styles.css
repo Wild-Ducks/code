@@ -14,13 +14,19 @@ body {
 
 /* Header Styling */
 .banner {
+    background-color: #1e1e1e;
+    padding: 16px 20px;
+    position: relative;
+}
+
+/* Centered header layout */
+.banner-inner {
     display: grid;
     grid-template-columns: 140px 1fr 320px;
     align-items: center;
 
-    background-color: #1e1e1e;
-    padding: 16px 20px;
-    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .header-left {
@@ -80,7 +86,8 @@ body {
 
 /* Header layout for smaller screens */
 @media (max-width: 900px) {
-    .banner {
+
+    .banner-inner {
         grid-template-columns: 90px 1fr;
         row-gap: 12px;
     }
@@ -99,6 +106,7 @@ body {
         grid-column: 1 / -1;
         grid-row: 2;
     }
+
 }
 
 /* Centering the Welcome Title */

@@ -5,9 +5,21 @@
  * into each page head section.
  */
 
-fetch("/website/meta.html")
+fetch("/meta.html")
 
-    .then(response => response.text())
+    .then(response => {
+
+        if (!response.ok) {
+
+            throw new Error(
+                `meta.html returned ${response.status}`
+            );
+
+        }
+
+        return response.text();
+
+    })
 
     .then(data => {
 

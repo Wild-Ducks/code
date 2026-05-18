@@ -1,52 +1,26 @@
 /*
  * Shared Component Loader
  *
- * Dynamically loads the shared header and footer
- * across all Wild Ducks LLC pages.
+ * Loads shared header and footer across all Wild Ducks LLC pages.
  */
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async () => {
+    async function loadComponent(selector, file) {
+        try {
+            const response = await fetch(file);
 
-    /* Load shared header */
+            if (!response.ok) {
+                throw new Error(`${file} returned ${response.status}`);
+            }
 
-    fetch("/website/header.html")
+            document.querySelector(selector).innerHTML =
+                await response.text();
 
-        .then(response => response.text())
+        } catch (error) {
+            console.error(`Error loading ${file}:`, error);
+        }
+    }
 
-        .then(data => {
-
-            document.querySelector("header").innerHTML = data;
-
-        })
-
-        .catch(error => {
-
-            console.error(
-                "Error loading header:",
-                error
-            );
-
-        });
-
-    /* Load shared footer */
-
-    fetch("/website/footer.html")
-
-        .then(response => response.text())
-
-        .then(data => {
-
-            document.querySelector("footer").innerHTML = data;
-
-        })
-
-        .catch(error => {
-
-            console.error(
-                "Error loading footer:",
-                error
-            );
-
-        });
-
+    loadComponent("header", "/header.html");
+    loadComponent("footer", "/footer.html");
 });
